@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&family=Kalam&display=swap" rel="stylesheet">
+	</head>
+    <style>
+        header{
+display:flex;
+margin:0;
+color:white;
+}
+body
+{
+background-color: #0cbaba;
+background-image: linear-gradient(315deg,#380036  0%, #0cbaba 74%);
+color:white;
+height:800px;
+}
+nav a {
+  float:left;
+  text-align:right;
+  padding:14px 16px;
+  font-size:30px;
+  text-decoration:none;
+  color:white;
+}
+nav
+{
+ margin-left:670px;
+}
+.sub
+{
+background:url("{{url_for('static',filename='images/fingerprint.png')}}") no-repeat right top;
+height:600px;
+font-size:15px;
+}
+.button
+{
+background-size:cover;
+background-color:#0cbaba;
+border-radius:50px;
+font-size:25px;
+color:white;
+}
+a
+{
+color:white;
+text-decoration:none;
+}
+.abc
+{
+display:flex;
+justify-content:space-between;
+}
+.xyz
+{    
+font-size:25px;
+}
+    </style>
+	<body>
+        <div
+        style="display:flex;flex-direction: row;background-color:#380036;justify-content: center; justify-items: center;align-items: center;position:sticky;width: 100%; margin:0%">
+        <div>
+          <h1>Offence Tracker- A Crime Classification</h1>
+        </div>
+        <div>
+          <nav style="display:flex">
+            <a href="/">Home</a>
+            <a href="/prediction">Predict</a>
+          </nav>
+        </div>
+      </div>
+<br>
+<br>
+<br>
+	<div class="sub">
+<br>
+<br>
+<br>
+  <h3> Drop in the image to get the prediction <h3>
+<br>
+<br>
+<h1 style="color:red">
+    {{ text }}
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" id="imgpath">
+<br>
+<img id="displayImg"></img>
+<br>
+    <input type="submit" value="Upload">
+  </form>
+<br>
+
+	</div>
+				
+	</body>
+    <script>
+        let v = document.getElementById("imgpath");
+        v.addEventListener('change',(slef)=>{
+           let p=v.value;
+           console.log("/static/images/"+p.split("\\").pop())
+           console.log("{{url_for('static',filename='images/home.png')}}")
+           let x=document.getElementById("displayImg");
+           x.src= "/static/images/"+p.split("\\").pop();
+           self.hidden="true"
+        })  
+    </script>
+</html>

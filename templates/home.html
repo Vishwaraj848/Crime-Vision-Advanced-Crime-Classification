@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&family=Kalam&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+  header {
+    display: flex;
+    margin: 0;
+    color: white;
+  }
+
+  body {
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #380036 0%, #0cbaba 74%);
+    color: white;
+    height: 800px;
+  }
+
+  nav a {
+    float: left;
+    text-align: right;
+    padding: 14px 16px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+  }
+
+  nav {
+    margin-left: 670px;
+  }
+
+  .sub {
+    background: url("fingerprint.png") no-repeat right top;
+    height: 600px;
+    font-size: 15px;
+  }
+
+  .button {
+    background-size: cover;
+    background-color: #0cbaba;
+    border-radius: 50px;
+    font-size: 25px;
+    color: white;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* .abc
+{
+display:flex;
+justify-content:space-between;
+} */
+  .xyz {
+    font-size: 25px;
+  }
+
+  .arrange {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content {
+    text-align: justify;
+    padding: 10px;
+  }
+</style>
+
+<body>
+  <div
+    style="display:flex;flex-direction: row;background-color:#380036;justify-content: center; justify-items: center;align-items: center;position:sticky;width: 100%; margin:0%">
+    <div>
+      <h1>Offence Tracker- A Crime Classification</h1>
+    </div>
+    <div>
+      <nav style="display:flex">
+        <a href="/">Home</a>
+        <a href="/prediction">Predict</a>
+      </nav>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="arrange">
+    <div class=xyz>
+      <b>Stop crime in its tracks: Understand criminal classifications!!</b>
+      <br><br>
+      <div class="content">
+        Crime classification is the process of categorizing criminal offenses into different types or classes based on
+        their nature, severity, and other characteristics. The classification of crimes helps law enforcement agencies
+        and criminal justice systems to better understand and manage criminal activity, to allocate resources
+        efficiently, and to develop appropriate responses to different types of criminal behavior.By using deep
+        learning, it is possible to analyze images and video footage of crime scenes or incidents and classify different
+        types of crimes based on the type of activity depicted in the images. This can be useful in a variety of
+        criminal justice and law enforcement contexts, including crime scene investigation, forensic analysis, and
+        surveillance.Deep learning algorithms can be trained to recognize patterns and features in images and video that
+        are relevant to identifying different types of crimes.
+      </div>
+    </div>
+    <div class="swe">
+      <img src="{{url_for('static', filename='images/home.png')}}" />
+    </div>
+
+  </div>
+
+</body>
+
+</html>
